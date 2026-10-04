@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: distributed-task-scheduler
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
